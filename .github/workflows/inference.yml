@@ -26,10 +26,21 @@ jobs:
         from sentiment_classifier import SentimentClassifier
         classifier = SentimentClassifier()
         test_texts = [
+            # Clear positive/negative examples
             'This is a fantastic day!',
-            'I am feeling very disappointed.',
-            'The product quality is excellent.',
-            'The service was terrible.'
+            'The service was terrible.',
+            
+            # Mixed or complex emotions
+            'The movie was interesting but also quite disturbing.',
+            'I am feeling nostalgic about the past, both happy and sad memories.',
+            'It could have been worse, but it could have been better too.',
+            'The experience was bittersweet.',
+            'I am not sure how to feel about this situation.',
+            'The ending was unexpected, leaving me with mixed feelings.',
+            
+            # Subtle or neutral statements
+            'This is different from what I expected.',
+            'The weather is changing.'
         ]
         print('\nRunning sentiment analysis on test sentences:')
         for text in test_texts:
